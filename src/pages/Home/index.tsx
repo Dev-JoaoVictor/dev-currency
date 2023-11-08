@@ -2,8 +2,14 @@ import { Link } from 'react-router-dom';
 import styles from './home.module.css';
 
 import { BiSearch } from 'react-icons/bi'
+import { useApi } from '../../hooks/useApi';
 
 export function Home() {
+
+  const { coins } = useApi();
+
+  console.log(coins)
+
   return (
     <main className={styles.container}>
       <form className={styles.form}>
