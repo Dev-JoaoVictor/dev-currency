@@ -8,8 +8,6 @@ export function Home() {
 
   const { coins } = useApi();
 
-  console.log(coins)
-
   return (
     <main className={styles.container}>
       <form className={styles.form}>
@@ -31,23 +29,29 @@ export function Home() {
             <th scope='col'>Volume</th>
           </tr>
         </thead>
-        <tbody>
-          <tr className={styles.tr}>
-            <td className={styles.tdLabel} data-label="Moeda">
-              <Link className={styles.link} to="/detail/btc">
-                <span>Bitcoin</span> | BTC
-              </Link>
-            </td>
-            <td className={styles.tdLabel} data-label="Mercado">
-              R$ 100
-            </td>
-            <td className={styles.tdLabel} data-label="Preço">
-              R$ 100
-            </td>
-            <td className={styles.tdLoss} data-label="Volume">
-              <span>-5.3</span>
-            </td>
-          </tr>
+        <tbody id="tbody">
+          <div className='tbody-container'>
+            {
+              coins.map(coin => (
+                <tr key={coin.name} className={styles.tr}>
+                  <td className={styles.tdLabel} data-label="Moeda">
+                    <Link className={styles.link} to={`/detail/${coin.symbol}`}>
+                      <span>{coin.name}</span> | {coin.symbol}
+                    </Link>
+                  </td>
+                  <td className={styles.tdLabel} data-label="Mercado">
+                    {coin.formatedMarket}
+                  </td>
+                  <td className={styles.tdLabel} data-label="Preço">
+                    {coin.formatedPrice}
+                  </td>
+                  <td className={Number(coin?.delta_24h) >= 0 ? styles.tdProfit : styles.tdProfit} data-label="Volume">
+                    <span>{coin.delta_24h}</span>
+                  </td>
+                </tr>
+              ))
+            }
+          </div>
         </tbody>
       </table>
     </main>
