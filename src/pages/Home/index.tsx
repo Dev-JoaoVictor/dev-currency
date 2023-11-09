@@ -1,13 +1,14 @@
 import styles from './home.module.css';
+import { FormEvent, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
 import { BiSearch } from 'react-icons/bi'
 import { useCoins } from '../../hooks/useCoins';
-import { FormEvent, useState } from 'react';
+import { Loading } from '../../components/Loading';
 
 export function Home() {
 
-  const { coins } = useCoins();
+  const { coins, loading } = useCoins();
   const [inputValue, setInputValue] = useState('');
   const navigate = useNavigate();
 
@@ -16,6 +17,12 @@ export function Home() {
     if (inputValue === "") return;
 
     navigate(`/detail/${inputValue}`);
+  }
+
+  if (loading) {
+    return (
+      <Loading />
+    )
   }
 
   return (

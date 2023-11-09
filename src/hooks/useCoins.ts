@@ -19,6 +19,7 @@ interface DataProps {
 
 export function useCoins() {
   const [coins, setCoins] = useState<CoinsProps[]>([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     async function getData() {
@@ -42,7 +43,7 @@ export function useCoins() {
           };
           return formated;
         });
-
+        setLoading(false);
         setCoins(formatResult);
       }
     }
@@ -52,5 +53,6 @@ export function useCoins() {
 
   return {
     coins,
+    loading,
   };
 }

@@ -15,6 +15,7 @@ interface CoinsProps {
   formatedMarket: string;
   formatedLowPrice: string;
   formatedHighPrice: string;
+  formatedDelta: string;
   error?: string;
 }
 
@@ -35,6 +36,7 @@ export function useDetails(cripto: string) {
           });
           const resultData = {
             ...data,
+            formatedDelta: data.delta_24h.replace(",", "."),
             formatedPrice: price.format(Number(data.price)),
             formatedMarket: price.format(Number(data.market_cap)),
             formatedLowPrice: price.format(Number(data.low_24h)),

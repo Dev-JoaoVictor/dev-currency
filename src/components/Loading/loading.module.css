@@ -1,0 +1,12 @@
+.container {
+  max-width: 42rem;
+  margin: 2.4rem auto;
+  padding: 2.4rem;
+  border-radius: 8px;
+}
+
+.text {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #fff;
+}
