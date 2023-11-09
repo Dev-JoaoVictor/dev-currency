@@ -1,5 +1,5 @@
-import { Link } from 'react-router-dom';
 import styles from './home.module.css';
+import { Link } from 'react-router-dom';
 
 import { BiSearch } from 'react-icons/bi'
 import { useApi } from '../../hooks/useApi';
@@ -16,7 +16,7 @@ export function Home() {
           placeholder='Digite o código da Ex: BTC'
         />
         <button type='submit'>
-          <BiSearch size={20} color="#fff" />
+          <BiSearch size={30} color="#fff" />
         </button>
       </form>
 
@@ -44,8 +44,8 @@ export function Home() {
                 <td className={styles.tdLabel} data-label="Preço">
                   {coin.formatedPrice}
                 </td>
-                <td className={Number(coin?.delta_24h) >= 0 ? styles.tdProfit : styles.tdProfit} data-label="Volume">
-                  <span>{coin.delta_24h}</span>
+                <td className={Number(coin?.formatedDelta) >= 0 ? styles.tdProfit : styles.tdLoss} data-label="Volume">
+                  <span>{coin.formatedDelta}</span>
                 </td>
               </tr>
             ))
