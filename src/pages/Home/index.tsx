@@ -30,28 +30,26 @@ export function Home() {
           </tr>
         </thead>
         <tbody id="tbody">
-          <div className='tbody-container'>
-            {
-              coins.map(coin => (
-                <tr key={coin.name} className={styles.tr}>
-                  <td className={styles.tdLabel} data-label="Moeda">
-                    <Link className={styles.link} to={`/detail/${coin.symbol}`}>
-                      <span>{coin.name}</span> | {coin.symbol}
-                    </Link>
-                  </td>
-                  <td className={styles.tdLabel} data-label="Mercado">
-                    {coin.formatedMarket}
-                  </td>
-                  <td className={styles.tdLabel} data-label="Preço">
-                    {coin.formatedPrice}
-                  </td>
-                  <td className={Number(coin?.delta_24h) >= 0 ? styles.tdProfit : styles.tdProfit} data-label="Volume">
-                    <span>{coin.delta_24h}</span>
-                  </td>
-                </tr>
-              ))
-            }
-          </div>
+          {
+            coins.map(coin => (
+              <tr key={coin.name} className={styles.tr}>
+                <td className={styles.tdLabel} data-label="Moeda">
+                  <Link className={styles.link} to={`/detail/${coin.symbol}`}>
+                    <span>{coin.name}</span> | {coin.symbol}
+                  </Link>
+                </td>
+                <td className={styles.tdLabel} data-label="Mercado">
+                  {coin.formatedMarket}
+                </td>
+                <td className={styles.tdLabel} data-label="Preço">
+                  {coin.formatedPrice}
+                </td>
+                <td className={Number(coin?.delta_24h) >= 0 ? styles.tdProfit : styles.tdProfit} data-label="Volume">
+                  <span>{coin.delta_24h}</span>
+                </td>
+              </tr>
+            ))
+          }
         </tbody>
       </table>
     </main>
