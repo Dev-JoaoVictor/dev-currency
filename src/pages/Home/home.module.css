@@ -1,30 +1,30 @@
-.container{
+.container {
   margin: 0 1.4rem;
 }
 
-.form{
+.form {
   width: 100%;
   display: flex;
   gap: 1.4rem;
 }
 
-.form input{
+.form input {
   width: 100%;
   height: 4.4rem;
   border-radius: 8px;
-  border:0;
+  border: 0;
   padding: 0 8px;
   outline: none;
 }
 
-.form button{
+.form button {
   background: transparent;
-  border:0;
+  border: 0;
 }
 
 table {
   border-collapse: collapse;
-  border-collapse:separate; 
+  border-collapse: separate;
   border-spacing: 0 1.4rem;
   margin: 0;
   padding: 0;
@@ -37,7 +37,7 @@ table caption {
   margin: .5em 0 .75em;
 }
 
-.tr{
+.tr {
   background-color: #1D1C20;
 }
 
@@ -64,33 +64,34 @@ table th {
   text-transform: uppercase;
 }
 
-
-
-.tdLabel span{
+.tdLabel span {
   font-weight: bold;
   font-size: 1.8rem;
   color: #FFF;
 }
 
-.tdLabel, .tdProfit, .tdLoss{
+.tdLabel,
+.tdProfit,
+.tdLoss {
   color: #BBBBBB;
   font-size: 1.4rem;
 }
 
-.tdProfit span{
-  color:#12F98A;
-}
-.tdLoss span{
-  color:#F91257;
+.tdProfit span {
+  color: #12F98A;
 }
 
-.link{
+.tdLoss span {
+  color: #F91257;
+}
+
+.link {
   text-decoration: none;
   color: #FFF;
   transition: color 0.5s;
 }
 
-.link:hover{
+.link:hover {
   color: #30BEFF;
 }
 
@@ -102,7 +103,7 @@ table th {
   table caption {
     font-size: 1.3em;
   }
-  
+
   table thead {
     border: none;
     clip: rect(0 0 0 0);
@@ -113,27 +114,27 @@ table th {
     position: absolute;
     width: 1px;
   }
-  
+
   .tr {
     border-bottom: 1px solid #ddd;
     display: block;
     margin-bottom: 1.4rem;
   }
-  
+
   table td {
     border-bottom: 1px solid rgba(221, 221, 221, 0.164);
     display: block;
     font-size: 1.4rem;
     text-align: right;
   }
-  
+
   table td::before {
     content: attr(data-label);
     float: left;
     font-weight: bold;
     text-transform: uppercase;
   }
-  
+
   table td:last-child {
     border-bottom: 0;
   }
