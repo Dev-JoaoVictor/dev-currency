@@ -17,7 +17,7 @@ interface DataProps {
   coins: CoinsProps[];
 }
 
-export function useApi() {
+export function useCoins() {
   const [coins, setCoins] = useState<CoinsProps[]>([]);
 
   useEffect(() => {
