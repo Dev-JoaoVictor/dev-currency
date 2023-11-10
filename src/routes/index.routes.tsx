@@ -1,8 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 
 import { Home } from "../pages/Home";
-import { Layout } from '../components/Layout'
 import { Details } from "../pages/Details";
+import { Layout } from '../components/Layout'
+import { NotFound } from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
         path: '/detail/:cripto',
         element: <Details />
       },
+      {
+        path: '*',
+        element: <NotFound />
+      }
     ],
   }
 ]);

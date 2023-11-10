@@ -34,6 +34,9 @@ export function Details() {
           <li>
             <strong>Menor preço 24h: </strong>{detail?.formatedHighPrice}
           </li>
+          <li>
+            <strong>Valor mercado: </strong>{detail?.formatedMarket}
+          </li>
         </ul>
       </section>
     </div>

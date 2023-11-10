@@ -137,7 +137,7 @@ table td {
     content: attr(data-label);
     float: left;
     font-weight: bold;
-    color: #FFF;
+    color: #30beff;
     text-transform: uppercase;
   }
 
