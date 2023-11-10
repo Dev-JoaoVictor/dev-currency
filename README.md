@@ -1,27 +1,37 @@
-# React + TypeScript + Vite
+# Pesquisa Cripto moedas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Neste projeto, eu criei uma interface simples e intuitiva que mostra as principais cripto moedas do mercado e seus valores atualizados.
 
-Currently, two official plugins are available:
+### 📋 Pré-requisitos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Npm
+- NodeJs
 
-## Expanding the ESLint configuration
+### 🔧 Instalação
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. Clone este repositório
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-   },
+```
+git clone https://github.com/Dev-JoaoVictor/dev-currency.git
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+2. Após o clone do projeto, abra um novo terminal e navegue até a pasta `dev-currency` e instale as dependências
+
+```
+npm install
+```
+
+5. Execute o servidor web
+
+```
+npm run dev
+```
+
+## 🛠️ Construído com
+
+- [React](https://react.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+
+## 📄 Licença
+
+Este projeto está sob a licença MIT - veja o arquivo [LICENSE](https://github.com/Dev-JoaoVictor/dev-currency/blob/main/LICENSE.txt) para detalhes.
